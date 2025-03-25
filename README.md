@@ -23,36 +23,35 @@ pip install requests
 Para utilizar la API de OpenWeatherMap, necesitas una clave de API. Si aún no tienes una, puedes obtenerla registrándote en el sitio web de OpenWeatherMap.
 
 Una vez que tengas tu clave, reemplázala en el código en la variable api_key.
-
+```
 api_key = "TU_API_KEY_AQUI"
-
+```
 # 2. Configuración de las coordenadas
 El script está configurado para generar puntos aleatorios alrededor de las coordenadas de Muzo, Colombia (latitud: 5.067680, longitud: -75.509819). Si deseas cambiar el lugar central, solo tienes que modificar las variables central_lat y central_lon.
-
+```
 central_lat = 5.067680  # Latitud 
 central_lon = -75.509819  # Longitud 
-
+```
 Link : https://www.latlong.net/
 
 # 3. Rango de puntos aleatorios
 El script genera puntos aleatorios dentro de un radio de 10 kilómetros alrededor del lugar central. Puedes cambiar este valor modificando la variable radius_km.
-
+```
 radius_km = 10  # Radio en kilómetros
-
+```
 # 4. Generación de puntos
 El script genera 50 puntos aleatorios y obtiene datos climáticos y de elevación de cada uno de estos puntos.
-
+```
 random_points = generate_random_points_around_central_point(50, central_lat, central_lon, radius_km)
-
+```
 # 5. Guardado de los datos
 Los datos generados se guardan en formato GeoJSON en el archivo especificado por la variable output_file.
-
+```
 output_file = "ruta/del/archivo.geojson"
-
-
+```
 ## Estructura de los Datos
 El archivo generado es un archivo GeoJSON que contiene los datos climáticos y de elevación de cada uno de los puntos aleatorios generados. La estructura de los datos en el archivo será similar a la siguiente:
-
+```
 {
     "type": "FeatureCollection",
     "features": [
@@ -80,8 +79,7 @@ El archivo generado es un archivo GeoJSON que contiene los datos climáticos y d
         ...
     ]
 }
-
-
+```
 Cada punto contiene información de latitud, longitud, temperatura, humedad, presión atmosférica, entre otros.
 
 ## Contribuciones
