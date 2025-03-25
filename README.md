@@ -2,10 +2,8 @@
 
 Este repositorio contiene un script en Python que consume la API de OpenWeatherMap para obtener datos climáticos de puntos aleatorios alrededor de un lugar central (en este caso, Colombia). Los datos obtenidos incluyen información como la temperatura, humedad, presión, velocidad del viento, descripción del clima, entre otros.
 
-```
 https://openweathermap.org/
 
-```
 ## Requisitos
 
 - Python 3.x
@@ -36,9 +34,9 @@ El script está configurado para generar puntos aleatorios alrededor de las coor
 central_lat = 5.067680  # Latitud 
 central_lon = -75.509819  # Longitud 
 ```
-```
+
 Link : https://www.latlong.net/
-```
+
 # 3. Rango de puntos aleatorios
 El script genera puntos aleatorios dentro de un radio de 10 kilómetros alrededor del lugar central. Puedes cambiar este valor modificando la variable radius_km.
 ```
